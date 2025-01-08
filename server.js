@@ -31,7 +31,7 @@ app.post('/login', (req, res) => {
   if (username === 'iamamaster' && password === 'ub2@sine69')  {
     res.json({ success: true, message: 'Login successful' });
   } else {
-    res.status(401).json({ success: false, message: 'Invalid credentials' });
+    res.status(404).json({ success: false, message: 'Invalid credentials' });
   }
 });
 
