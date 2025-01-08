@@ -17,7 +17,7 @@ const users = [
 ];
 
 // GET 엔드포인트 (테스트용)
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
@@ -26,8 +26,9 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
   // 사용자 인증
-  const user = users.find((user) => user.id === username && user.password === password);
-  if (user) {
+ // const user = users.find((user) => user.id === username && user.password === password);
+ // if (user) {
+  if (username === 'iamamaster' && password === 'ub2@sine69')  {
     res.json({ success: true, message: 'Login successful' });
   } else {
     res.status(401).json({ success: false, message: 'Invalid credentials' });
