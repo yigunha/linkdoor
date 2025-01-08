@@ -17,7 +17,7 @@ const users = [
 ];
 
 // GET 엔드포인트 (테스트용)
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
