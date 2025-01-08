@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 
 // HTTP 서버로 실행 (Railway에서 HTTPS 자동 처리됨)
 app.listen(port, () => {
-  console.log(`Server running at https://linkback-production.up.railway.app:${port}`);
+  console.log(`Server running at linkdoor-production.up.railway.app:${port}`);
 });
 
