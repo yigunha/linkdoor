@@ -1,9 +1,3 @@
-const corsOptions = {
-  origin: 'https://wd2link.netlify.app',  // 요청을 허용할 도메인
-  methods: 'GET,POST',  // 허용할 HTTP 메소드
-  allowedHeaders: 'Content-Type',  // 허용할 헤더
-};
-
 const express = require('express');
 const cors = require('cors');
 
@@ -11,8 +5,7 @@ const app = express();
 const port = process.env.PORT || 5000;  // Railway에서 자동으로 포트 설정
 
 // CORS 설정
-// app.use(cors());
-app.use(cors(corsOptions));
+app.use(cors());
 
 // JSON 본문 파싱 설정
 app.use(express.json());
@@ -44,5 +37,7 @@ app.post('/login', (req, res) => {
 
 // 서버 실행
 app.listen(port, () => {
-  console.log(`Server running at https://linkback-production.up.railway.app:${port}`);
+ // console.log(`Server running at https://linkback-production.up.railway.app:${port}`);
+ console.log(`Server running on port ${port}`);
+
 });
